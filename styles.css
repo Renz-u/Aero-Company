@@ -1,0 +1,23 @@
+body {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.hero-text .btn {
+margin-top: 1rem;
+padding: 0.7rem 1.4rem;
+background: #0077ff;
+color: white;
+border-radius: 6px;
+text-decoration: none;
+}
+
+.sub-header {
+background: #111726;
+padding: 2rem;
+text-align: center;
+}
+
