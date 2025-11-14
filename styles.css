@@ -21,3 +21,56 @@ padding: 2rem;
 text-align: center;
 }
 
+.cards {
+display: flex;
+justify-content: center;
+padding: 2rem;
+gap: 1rem;
+}
+
+.card {
+background: #1a2238;
+padding: 1.5rem;
+width: 250px;
+text-align: center;
+border-radius: 8px;
+}
+
+.services-section {
+padding: 2rem;
+}
+
+.service-item {
+background: #1a2238;
+padding: 1rem;
+margin-bottom: 1rem;
+border-radius: 6px;
+}
+
+.contact-section {
+padding: 2rem;
+}
+
+.contact-form {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+width: 300px;
+margin: auto;
+}
+
+button {
+padding: 0.6rem;
+background: #0077ff;
+border: none;
+color: white;
+border-radius: 6px;
+}
+
+footer {
+text-align: center;
+padding: 1rem;
+background: #0a0f1f;
+margin-top: 2rem;
+}
+
