@@ -1,18 +1,56 @@
 body {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0a0f1f;      
+    color: #fff;              
 }
 
-.hero-text .btn {
-margin-top: 1rem;
-padding: 0.7rem 1.4rem;
-background: #0077ff;
-color: white;
-border-radius: 6px;
-text-decoration: none;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    padding: 15px 30px;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+}
+
+nav a {
+    text-decoration: none;
+    color: #f0db4f; 
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+main {
+    display: block;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+    padding: 20px;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+form {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+form label {
+    font-weight: 500;
 }
 
 .sub-header {
@@ -21,19 +59,12 @@ padding: 2rem;
 text-align: center;
 }
 
-.cards {
-display: flex;
-justify-content: center;
-padding: 2rem;
-gap: 1rem;
-}
-
 .card {
-background: #1a2238;
+background: #203572;
 padding: 1.5rem;
 width: 250px;
 text-align: center;
-border-radius: 8px;
+border-radius: 6px;
 }
 
 .services-section {
