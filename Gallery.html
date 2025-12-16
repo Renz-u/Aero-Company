@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery-Aero</title>
+  <title>Gallery - Aero Inc.</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+
 <header>
   <nav class="navbar">
       <h1 class="logo">AERO INC.</h1>
@@ -19,45 +19,111 @@
           <a href="Contacts.html">Contact Us</a>
       </div>
   </nav>
+</header>
 
-    
-    <section class="page-header">
-        <h1>Gallery</h1>
-        <p>A collection of our conceptual spacecraft designs and mission visuals.</p>
-    </section>
+<section class="page-header">
+    <h1>Gallery</h1>
+    <p>Explore our SpaceShift spacecraft designs and mission visuals.</p>
+</section>
 
-    <section class="gallery-grid">
+<!-- FILTER BUTTONS -->
+<section class="gallery-controls">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="spacecraft">Spacecraft</button>
+  <button class="filter-btn" data-filter="launch">Launch</button>
+  <button class="filter-btn" data-filter="concept">Concept</button>
+</section>
 
-        <div class="gallery-item">
-            <img src="images/spacecraft1.jpg" alt="Spacecraft Design 1">
-            <p>Concept Model Alpha</p>
-        </div>
+<!-- GALLERY GRID -->
+<section class="gallery-grid">
 
-        <div class="gallery-item">
-            <img src="images/spacecraft2.jpg" alt="Spacecraft Design 2">
-            <p>Exploration Craft Series X</p>
-        </div>
+  <div class="gallery-item spacecraft">
+    <img src="images/spacecraft1.jpg" alt="Concept Model Alpha">
+    <div class="overlay">Concept Model Alpha</div>
+  </div>
 
-        <div class="gallery-item">
-            <img src="images/spacecraft3.jpg" alt="Spacecraft Design 3">
-            <p>High-Speed Orbiter Y-12</p>
-        </div>
+  <div class="gallery-item launch">
+    <img src="images/spacecraft2.jpg" alt="Exploration Craft X">
+    <div class="overlay">Exploration Craft Series X</div>
+  </div>
 
-        <div class="gallery-item">
-            <img src="images/spacecraft4.jpg" alt="Spacecraft Design 4">
-            <p>Deep-Space Vessel Omega</p>
-        </div>
+  <div class="gallery-item spacecraft">
+    <img src="images/spacecraft3.jpg" alt="High-Speed Orbiter Y-12">
+    <div class="overlay">High-Speed Orbiter Y-12</div>
+  </div>
 
-    </section>
+  <div class="gallery-item concept">
+    <img src="images/spacecraft4.jpg" alt="Deep-Space Vessel Omega">
+    <div class="overlay">Deep-Space Vessel Omega</div>
+  </div>
 
+  <div class="gallery-item spacecraft">
+    <img src="images/spacecraft5.jpg" alt="Nova X Orbital Cruiser">
+    <div class="overlay">Nova X Orbital Cruiser</div>
+  </div>
+
+  <div class="gallery-item launch">
+    <img src="images/spacecraft6.jpg" alt="Orion V Launch">
+    <div class="overlay">Orion V Launch</div>
+  </div>
+
+</section>
+
+<!-- IMAGE MODAL -->
+<div class="image-modal" id="imageModal">
+  <span class="close-modal">&times;</span>
+  <img id="modalImg">
+  <p id="modalText"></p>
+</div>
 
 <footer>
-<p>© 2025 Aero Inc.</p>
-<p>Email: support@aeroinc.com</p>
-<p>Privacy Policy | Terms of Service</p>
+  <p>© 2025 Aero Inc. • SpaceShift • All Rights Reserved</p>
+  <p>Email: support@aeroinc.com</p>
+  <p>Privacy Policy | Terms of Service</p>
 </footer>
 
+<script>
+  // FILTER FUNCTION
+  const items = document.querySelectorAll('.gallery-item');
+  const buttons = document.querySelectorAll('.filter-btn');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+
+      items.forEach(item => {
+        item.style.display =
+          filter === 'all' || item.classList.contains(filter)
+            ? 'block'
+            : 'none';
+      });
+    });
+  });
+
+  // IMAGE MODAL
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImg');
+  const modalText = document.getElementById('modalText');
+
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      modalImg.src = item.querySelector('img').src;
+      modalText.textContent = item.querySelector('.overlay').textContent;
+    });
+  });
+
+  document.querySelector('.close-modal').onclick = () => {
+    modal.style.display = 'none';
+  };
+</script>
+
 </body>
+</html>
+
     
     
     
