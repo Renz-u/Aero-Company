@@ -27,46 +27,65 @@
         <button class="hero-btn">EXPLORE NOW</button>
     </div>
 
-    <img src="your-jet-image.png" class="hero-img">
+    <img src="jet-image.png" class="hero-img">
 </section>
 
-<section class="about">
-  <h2>ABOUT US</h2>
-  <p>
-    Aero Inc. is a leading aerospace company dedicated to revolutionizing space travel.
-    Founded in 2025, our mission is to develop advanced spacecraft for the future of exploration.
-  </p>
-</section>
+<section id="home">
+    <h1>Reaching New Frontiers</h1>
+    <p>Aero Inc. builds future-ready spacecraft designed for safe, accessible, and innovative space travel.</p>
+    <a class="btn" href="#about">Learn More</a>
+  </section>
 
-<section class="products">
-  <h2>PRODUCTS</h2>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Aero Inc.</h2>
+    <p><strong>Mission:</strong> Expand space travel beyond Earth through innovation and safety.</p>
+    <p><strong>Vision:</strong> A future where space is accessible to all.</p>
+    <p>Founded October 2025 by Laurence Anthony Geronga (CEO), Etienne Prince Lagana (CTO), and Mark Kevin Ecleo (COO).</p>
+  </section>
 
-  <div class="product-cards">
+  <!-- PRODUCTS -->
+  <section id="products">
+    <h2>Our Spacecraft</h2>
 
-      <div class="product-card">
-        <img src="modelA.png">
-        <h3>MODEL A</h3>
-        <p>Advanced spacecraft for local travel</p>
-      </div>
+    <h3>New</h3>
+    <div class="card-row">
+      <div class="card" onclick="openModal('Nova X', 1200000, 6)"><h3>Nova X</h3><p>Luxury orbital cruiser</p></div>
+      <div class="card" onclick="openModal('Orion V', 800000, 4)"><h3>Orion V</h3><p>Reliable mid-range craft</p></div>
+    </div>
+  </section>
 
-      <div class="product-card">
-        <img src="modelB.png">
-        <h3>MODEL B</h3>
-        <p>Long-range spacecraft for deep space exploration</p>
-      </div>
+  <!-- GALLERY -->
+  <section id="gallery">
+    <h2>Gallery Highlights</h2>
+    <div class="card-row">
+      <div class="card"><h3>Nova X Design</h3><p>Launched Jan 2026</p></div>
+      <div class="card"><h3>Orion V Launch</h3><p>Feb 2026</p></div>
+      <div class="card"><h3>Deep Space Test</h3><p>Model Atlas</p></div>
+    </div>
+  </section>
 
-      <div class="product-card">
-        <img src="modelC.png">
-        <h3>MODEL C</h3>
-        <p>Premium spacecraft for interplanetary travel</p>
-      </div>
-
+  <!-- MODAL BOOKING -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h3 id="shipName"></h3>
+      <p id="shipInfo"></p>
+      <input type="date" />
+      <input type="number" placeholder="Passengers" />
+      <input type="text" placeholder="Full Name" />
+      <select>
+        <option>Credit Card</option>
+        <option>PayPal</option>
+      </select>
+      <button class="btn" onclick="closeModal()">Book Now</button>
+    </div>
   </div>
-</section>
 
-<footer>
-  <p>© 2025 Aero — Reaching New Frontiers</p>
-</footer>
+  <footer>
+    <p>© 2025 Aero Inc. • Secure Payments • Encrypted Data • Terms & Privacy</p>
+  </footer>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
