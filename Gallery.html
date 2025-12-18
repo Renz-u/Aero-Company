@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery-Aero</title>
+  <title>Gallery - Aero Inc.</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+
 <header>
   <nav class="navbar">
       <h1 class="logo">AERO INC.</h1>
@@ -19,6 +19,8 @@
           <a href="Contacts.html">Contact Us</a>
       </div>
   </nav>
+</header>
+
 
 <!-- PAGE HEADER -->
 <section class="page-header">
@@ -27,66 +29,51 @@
       Discover how Aero Inc. transforms bold ideas into real spacecraft —
       from early design concepts to successful launch missions.
     </p>
-</section>
+
 
 <!-- FILTER BUTTONS -->
 <section class="gallery-controls">
   <button class="filter-btn active" data-filter="all">All</button>
+=
   <button class="filter-btn" data-filter="design">Spacecraft Design</button>
   <button class="filter-btn" data-filter="launch">Launch Events</button>
+
+  <button class="filter-btn" data-filter="spacecraft">Spacecraft</button>
+  <button class="filter-btn" data-filter="launch">Launch</button>
+  <button class="filter-btn" data-filter="concept">Concept</button>
 </section>
 
-<!-- GALLERY GRID -->
+
 <section class="gallery-grid">
 
-  <!-- SPACECRAFT DESIGN -->
-  <div class="gallery-item design">
-    <img src="images/spacecraft1.jpg" alt="Initial spacecraft concept sketches">
-    <div class="overlay">
-      Concept Design Sketches<br>
-      <small>Early planning phase of spacecraft development</small>
-    </div>
-  </div>
-
-  <div class="gallery-item design">
-    <img src="images/spacecraft4.jpg" alt="3D spacecraft engineering model">
-    <div class="overlay">
-      3D Engineering Model<br>
-      <small>Digital simulation and structural testing</small>
-    </div>
-  </div>
-
-  <div class="gallery-item design">
-    <img src="images/spacecraft5.jpg" alt="Nova X spacecraft prototype">
-    <div class="overlay">
-      Nova X Prototype<br>
-      <small>Final design before orbital testing (2026)</small>
-    </div>
-  </div>
-
-  <!-- LAUNCH EVENTS -->
-  <div class="gallery-item launch">
-    <img src="images/spacecraft2.jpg" alt="Orion V rocket launch event">
-    <div class="overlay">
-      Orion V Launch Event<br>
-      <small>Successful mid-range spacecraft deployment</small>
-    </div>
+  <div class="gallery-item spacecraft">
+    <img src="images/spacecraft1.jpg" alt="Concept Model Alpha">
+    <div class="overlay">Concept Model Alpha</div>
   </div>
 
   <div class="gallery-item launch">
-    <img src="images/spacecraft6.jpg" alt="Spacecraft liftoff sequence">
-    <div class="overlay">
-      Successful Liftoff<br>
-      <small>Mission execution and system validation</small>
-    </div>
+    <img src="images/spacecraft2.jpg" alt="Exploration Craft X">
+    <div class="overlay">Exploration Craft Series X</div>
+  </div>
+
+  <div class="gallery-item spacecraft">
+    <img src="images/spacecraft3.jpg" alt="High-Speed Orbiter Y-12">
+    <div class="overlay">High-Speed Orbiter Y-12</div>
+  </div>
+
+  <div class="gallery-item concept">
+    <img src="images/spacecraft4.jpg" alt="Deep-Space Vessel Omega">
+    <div class="overlay">Deep-Space Vessel Omega</div>
+  </div>
+
+  <div class="gallery-item spacecraft">
+    <img src="images/spacecraft5.jpg" alt="Nova X Orbital Cruiser">
+    <div class="overlay">Nova X Orbital Cruiser</div>
   </div>
 
   <div class="gallery-item launch">
-    <img src="images/spacecraft3.jpg" alt="Mission control room operations">
-    <div class="overlay">
-      Mission Control Operations<br>
-      <small>Real-time monitoring and navigation</small>
-    </div>
+    <img src="images/spacecraft6.jpg" alt="Orion V Launch">
+    <div class="overlay">Orion V Launch</div>
   </div>
 
 </section>
@@ -106,16 +93,26 @@
 <div class="image-modal" id="imageModal">
   <span class="close-modal">&times;</span>
   <img id="modalImg" alt="">
+=======
+<!-- IMAGE MODAL -->
+<div class="image-modal" id="imageModal">
+  <span class="close-modal">&times;</span>
+  <img id="modalImg">
+>>>>>>> 3b63788ffee9b7155ef3ca671ba7bfe8b833307a
   <p id="modalText"></p>
 </div>
 
 <footer>
-<p>© 2025 Aero Inc.</p>
-<p>Email: support@aeroinc.com</p>
-<p>Privacy Policy | Terms of Service</p>
+  <p>© 2025 Aero Inc. • SpaceShift • All Rights Reserved</p>
+  <p>Email: support@aeroinc.com</p>
+  <p>Privacy Policy | Terms of Service</p>
 </footer>
 
+<script src="script.js"></script>
+
 </body>
+</html>
+
     
     
     
