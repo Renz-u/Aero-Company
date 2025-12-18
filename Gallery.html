@@ -20,36 +20,94 @@
       </div>
   </nav>
 
-    
-    <section class="page-header">
-        <h1>Gallery</h1>
-        <p>A collection of our conceptual spacecraft designs and mission visuals.</p>
-    </section>
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <h1>Gallery</h1>
+    <p>
+      Discover how Aero Inc. transforms bold ideas into real spacecraft —
+      from early design concepts to successful launch missions.
+    </p>
+</section>
 
-    <section class="gallery-grid">
+<!-- FILTER BUTTONS -->
+<section class="gallery-controls">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="design">Spacecraft Design</button>
+  <button class="filter-btn" data-filter="launch">Launch Events</button>
+</section>
 
-        <div class="gallery-item">
-            <img src="images/spacecraft1.jpg" alt="Spacecraft Design 1">
-            <p>Concept Model Alpha</p>
-        </div>
+<!-- GALLERY GRID -->
+<section class="gallery-grid">
 
-        <div class="gallery-item">
-            <img src="images/spacecraft2.jpg" alt="Spacecraft Design 2">
-            <p>Exploration Craft Series X</p>
-        </div>
+  <!-- SPACECRAFT DESIGN -->
+  <div class="gallery-item design">
+    <img src="images/spacecraft1.jpg" alt="Initial spacecraft concept sketches">
+    <div class="overlay">
+      Concept Design Sketches<br>
+      <small>Early planning phase of spacecraft development</small>
+    </div>
+  </div>
 
-        <div class="gallery-item">
-            <img src="images/spacecraft3.jpg" alt="Spacecraft Design 3">
-            <p>High-Speed Orbiter Y-12</p>
-        </div>
+  <div class="gallery-item design">
+    <img src="images/spacecraft4.jpg" alt="3D spacecraft engineering model">
+    <div class="overlay">
+      3D Engineering Model<br>
+      <small>Digital simulation and structural testing</small>
+    </div>
+  </div>
 
-        <div class="gallery-item">
-            <img src="images/spacecraft4.jpg" alt="Spacecraft Design 4">
-            <p>Deep-Space Vessel Omega</p>
-        </div>
+  <div class="gallery-item design">
+    <img src="images/spacecraft5.jpg" alt="Nova X spacecraft prototype">
+    <div class="overlay">
+      Nova X Prototype<br>
+      <small>Final design before orbital testing (2026)</small>
+    </div>
+  </div>
 
-    </section>
+  <!-- LAUNCH EVENTS -->
+  <div class="gallery-item launch">
+    <img src="images/spacecraft2.jpg" alt="Orion V rocket launch event">
+    <div class="overlay">
+      Orion V Launch Event<br>
+      <small>Successful mid-range spacecraft deployment</small>
+    </div>
+  </div>
 
+  <div class="gallery-item launch">
+    <img src="images/spacecraft6.jpg" alt="Spacecraft liftoff sequence">
+    <div class="overlay">
+      Successful Liftoff<br>
+      <small>Mission execution and system validation</small>
+    </div>
+  </div>
+
+  <div class="gallery-item launch">
+    <img src="images/spacecraft3.jpg" alt="Mission control room operations">
+    <div class="overlay">
+      Mission Control Operations<br>
+      <small>Real-time monitoring and navigation</small>
+    </div>
+  </div>
+
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="gallery-cta">
+  <h2>Inspired by Our Innovations?</h2>
+  <p>
+    Explore our spacecraft lineup or contact Aero Inc. for partnerships
+    and future missions.
+  </p>
+  <a href="Products.html" class="btn">View Products</a>
+  <a href="Contacts.html" class="btn">Contact Us</a>
+</section>
+
+<!-- IMAGE MODAL -->
+<div class="image-modal" id="imageModal">
+  <span class="close-modal">&times;</span>
+  <img id="modalImg" alt="">
+  <p id="modalText"></p>
+</div>
 
 <footer>
 <p>© 2025 Aero Inc.</p>
