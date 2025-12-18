@@ -8,6 +8,7 @@
 </head>
 <body>
 
+<!-- NAVBAR -->
 <header>
   <nav class="navbar">
       <h1 class="logo">AERO INC.</h1>
@@ -15,75 +16,111 @@
           <a href="Aero.html">Home</a>
           <a href="aboutUs.html">About Us</a>
           <a href="Products.html">Products</a>
-          <a href="Gallery.html">Gallery</a>
+          <a href="Gallery.html" class="active">Gallery</a>
           <a href="Contacts.html">Contact Us</a>
       </div>
   </nav>
 </header>
 
+<!-- PAGE HEADER -->
 <section class="page-header">
     <h1>Gallery</h1>
-    <p>Explore our SpaceShift spacecraft designs and mission visuals.</p>
+    <p>
+      Discover how Aero Inc. transforms bold ideas into real spacecraft —
+      from early design concepts to successful launch missions.
+    </p>
 </section>
 
 <!-- FILTER BUTTONS -->
 <section class="gallery-controls">
   <button class="filter-btn active" data-filter="all">All</button>
-  <button class="filter-btn" data-filter="spacecraft">Spacecraft</button>
-  <button class="filter-btn" data-filter="launch">Launch</button>
-  <button class="filter-btn" data-filter="concept">Concept</button>
+  <button class="filter-btn" data-filter="design">Spacecraft Design</button>
+  <button class="filter-btn" data-filter="launch">Launch Events</button>
 </section>
 
 <!-- GALLERY GRID -->
 <section class="gallery-grid">
 
-  <div class="gallery-item spacecraft">
-    <img src="images/spacecraft1.jpg" alt="Concept Model Alpha">
-    <div class="overlay">Concept Model Alpha</div>
+  <!-- SPACECRAFT DESIGN -->
+  <div class="gallery-item design">
+    <img src="images/spacecraft1.jpg" alt="Initial spacecraft concept sketches">
+    <div class="overlay">
+      Concept Design Sketches<br>
+      <small>Early planning phase of spacecraft development</small>
+    </div>
+  </div>
+
+  <div class="gallery-item design">
+    <img src="images/spacecraft4.jpg" alt="3D spacecraft engineering model">
+    <div class="overlay">
+      3D Engineering Model<br>
+      <small>Digital simulation and structural testing</small>
+    </div>
+  </div>
+
+  <div class="gallery-item design">
+    <img src="images/spacecraft5.jpg" alt="Nova X spacecraft prototype">
+    <div class="overlay">
+      Nova X Prototype<br>
+      <small>Final design before orbital testing (2026)</small>
+    </div>
+  </div>
+
+  <!-- LAUNCH EVENTS -->
+  <div class="gallery-item launch">
+    <img src="images/spacecraft2.jpg" alt="Orion V rocket launch event">
+    <div class="overlay">
+      Orion V Launch Event<br>
+      <small>Successful mid-range spacecraft deployment</small>
+    </div>
   </div>
 
   <div class="gallery-item launch">
-    <img src="images/spacecraft2.jpg" alt="Exploration Craft X">
-    <div class="overlay">Exploration Craft Series X</div>
-  </div>
-
-  <div class="gallery-item spacecraft">
-    <img src="images/spacecraft3.jpg" alt="High-Speed Orbiter Y-12">
-    <div class="overlay">High-Speed Orbiter Y-12</div>
-  </div>
-
-  <div class="gallery-item concept">
-    <img src="images/spacecraft4.jpg" alt="Deep-Space Vessel Omega">
-    <div class="overlay">Deep-Space Vessel Omega</div>
-  </div>
-
-  <div class="gallery-item spacecraft">
-    <img src="images/spacecraft5.jpg" alt="Nova X Orbital Cruiser">
-    <div class="overlay">Nova X Orbital Cruiser</div>
+    <img src="images/spacecraft6.jpg" alt="Spacecraft liftoff sequence">
+    <div class="overlay">
+      Successful Liftoff<br>
+      <small>Mission execution and system validation</small>
+    </div>
   </div>
 
   <div class="gallery-item launch">
-    <img src="images/spacecraft6.jpg" alt="Orion V Launch">
-    <div class="overlay">Orion V Launch</div>
+    <img src="images/spacecraft3.jpg" alt="Mission control room operations">
+    <div class="overlay">
+      Mission Control Operations<br>
+      <small>Real-time monitoring and navigation</small>
+    </div>
   </div>
 
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="gallery-cta">
+  <h2>Inspired by Our Innovations?</h2>
+  <p>
+    Explore our spacecraft lineup or contact Aero Inc. for partnerships
+    and future missions.
+  </p>
+  <a href="Products.html" class="btn">View Products</a>
+  <a href="Contacts.html" class="btn">Contact Us</a>
 </section>
 
 <!-- IMAGE MODAL -->
 <div class="image-modal" id="imageModal">
   <span class="close-modal">&times;</span>
-  <img id="modalImg">
+  <img id="modalImg" alt="">
   <p id="modalText"></p>
 </div>
 
+<!-- FOOTER -->
 <footer>
-  <p>© 2025 Aero Inc. • SpaceShift • All Rights Reserved</p>
+  <p>© 2025 Aero Inc. • Space Innovation & Exploration</p>
   <p>Email: support@aeroinc.com</p>
   <p>Privacy Policy | Terms of Service</p>
 </footer>
 
+<!-- SCRIPT -->
 <script>
-  // FILTER FUNCTION
+  /* FILTER FUNCTION */
   const items = document.querySelectorAll('.gallery-item');
   const buttons = document.querySelectorAll('.filter-btn');
 
@@ -103,7 +140,7 @@
     });
   });
 
-  // IMAGE MODAL
+  /* IMAGE MODAL */
   const modal = document.getElementById('imageModal');
   const modalImg = document.getElementById('modalImg');
   const modalText = document.getElementById('modalText');
@@ -112,7 +149,8 @@
     item.addEventListener('click', () => {
       modal.style.display = 'flex';
       modalImg.src = item.querySelector('img').src;
-      modalText.textContent = item.querySelector('.overlay').textContent;
+      modalImg.alt = item.querySelector('img').alt;
+      modalText.textContent = item.querySelector('.overlay').innerText;
     });
   });
 
@@ -123,7 +161,3 @@
 
 </body>
 </html>
-
-    
-    
-    
